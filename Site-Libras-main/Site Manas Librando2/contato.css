@@ -1,0 +1,287 @@
+body{
+        margin: 0;
+        padding: 0;
+        background-image: url(Background_pg_contatos.jpg);
+        background-size:100% ;
+        width: 100%;
+        height: 100%;
+}
+.faixa_superior{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: white;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav{
+
+    text-align: center;
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+}
+nav a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 0px 50px 10px 0;
+    font-size: 20px;
+    position: relative;
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}   
+
+nav a:hover::after{
+    width: 80%;
+}
+
+.espaco_logo{
+    display: flex;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    padding: 15px;
+    display: none;
+}
+.dropdown-menu a{
+    display: block;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.container .box video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit:cover;
+}
+
+
+.espaco_links_contato{
+     align-items: center;
+    display: flex;
+    top: 0 ;
+    position: absolute;
+    left: 60%;
+    top: 20% ;
+}
+.box_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    color: black;
+    height: 389.47px;
+    width: 500px;
+    border-bottom: black;
+}
+
+
+.botoes_contato_whatsaap{
+    font-family: "ROBOTO",sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #25D366;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
+    -webkit-transform-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-proprty: box-shadow, transform;
+    
+}
+
+.botoes_contato_whatsaap:hover, .botoes_contato_whatsaap:focus, .botoes_contato_whatsaap:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+
+.botoes_contato_telegran{
+    font-family: "ROBOTO",sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #1f304e;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
+    -webkit-transform-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-proprty: box-shadow, transform;
+    
+}
+
+.botoes_contato_telegran:hover, .botoes_contato_telegran:focus, .botoes_contato_telegran:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+
+.botoes_contato_email{
+    font-family: "ROBOTO",sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background:#db4a39;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
+    -webkit-transform-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-proprty: box-shadow, transform;
+    
+}
+
+.botoes_contato_email:hover, .botoes_contato_email:focus, .botoes_contato_email:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.p-contato{
+    font-size: large;
+    font-size: 30px;
+}
+
+.card{
+    display: flex;
+    align-items: top;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    left: 2%;
+    width: 650px;
+    top: 20%;
+    font-size: 30px;
+    color: black;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    overflow: hidden;
+}
+
+.card span:first-of-type{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent, #4B0082);
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    animation: animar1 2s linear infinite;
+}
+
+@keyframes animar1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+
+    }
+}
+
+.card span:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    right:0;
+    background: linear-gradient(to bottom, transparent, #4B0082);
+    width: 6px;
+    height: 100%;
+    border-radius: 10px;
+    animation: animar2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+
+    }
+}
+
+.card span:nth-of-type(3){
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background: linear-gradient(to left, transparent,#4B0082);
+    animation: animar3 2s linear infinite;
+}
+
+@keyframes animar3 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+
+    }
+}
+
+.card span:last-of-type {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 6px;
+   height: 100%;
+   border-radius: 10px;
+   background: linear-gradient(to top, transparent, #4B0082);
+   animation: animar4 2s linear infinite;
+   animation-delay: 1s;
+}
+
+@keyframes animar4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+
+    }
+}

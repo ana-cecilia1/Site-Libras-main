@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="imgens-Ana/logo-manalibrando2.png" type="image/x-icon">
+</head>
+<body>
+<!--DEFININDO A FAIXA SUPERIOR E SEUS ITENS################################################################-->
+    <div class="faixa_superior">
+        <div class="espaco_logo">
+            <div class="container">
+                   <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video>
+                     </div>
+        
+            <script>
+                const clip = document.querySelectorAll('.clip');
+                for (let i = 0; i<clip.length; i++){
+                    clip[i].addEventListener('mouseenter',
+                    function(e){
+                        clip[i].play()
+                    })
+                    
+                }
+            </script> 
+        </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="pagina_inicial.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="pagina_inicial.html">Contato</a>
+                    </li>
+                    <li>
+                        <a href="pagina_inicial.html">Cursos</a>
+                    </li>
+                    <li>
+                        <a href="pagina_inicial.html">Serviços</a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+<!--########################################################################################################-->
+    
+    <div class="card">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+            <div class="container">
+                <video src="logo2.mp4" autoplay muted type="video/mp4"  class="clip2"></video>
+                <script>
+                    const clip2 = document.querySelectorAll('.clip2');
+                    for (let i = 0; i<clip2.length; i++){
+                        clip2[i].addEventListener('mouseenter',
+                        function(e){
+                            clip2[i].play()
+                        })
+                        
+                    }
+                </script> 
+            </div>
+        
+            <p>Entre em contato com MANAS LIBRANDO</p>
+        </div>
+    
+</body>
+</html>

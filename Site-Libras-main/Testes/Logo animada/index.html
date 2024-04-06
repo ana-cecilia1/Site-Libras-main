@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+           <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video>
+        </div>
+    </div>
+
+    <script>
+        const clip = document.querySelectorAll('.clip');
+        for (let i = 0; i<clip.length; i++){
+            clip[i].addEventListener('mouseenter',
+            function(e){
+                clip[i].play()
+            })
+            
+        }
+    </script>
+
+</body>
+</html>

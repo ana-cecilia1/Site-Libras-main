@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="shortcut icon" href="imgens-Ana/logo-manalibrando1.png" type="image/x-icon">
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <div class="faixa_superior">
+        <div class="espaco_logo">
+            <div class="container">
+                   <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video>
+            </div>
+        
+            <script>
+                const clip = document.querySelectorAll('.clip');
+                for (let i = 0; i<clip.length; i++){
+                    clip[i].addEventListener('mouseenter',
+                    function(e){
+                        clip[i].play()
+                    })
+                    
+                }
+            </script> 
+        </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="pagina_inicial.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                    <li>
+                        <a href="cursos.html">Cursos</a>
+                    </li>
+                    <li>
+                        <a href="pagina_inicial.html">Serviços</a>
+                    </li>
+                    <li class="dropdown">
+                            <a href="pagina_inicial.html">Mais</a>
+
+                            <div class="dropdown-menu">
+                                <a href="pagina_inicial.html">Serviços1</a>
+                                <a href="pagina_inicial.html">Serviços2</a>
+                                <a href="pagina_inicial.html">Serviços3</a>
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+
+    <div class="container-card">
+        <div class="card">
+                <img src="libras.png" alt="Alasca">
+                <div class="intro">
+                    <h1>ALASCA</h1>
+                    <p>No norte, o clima é polar e, no sul e litoral, o clima é temperado. As temperaturas médias variam de -24°C a 16°C, dependendo da região e do período do ano.</p>
+                </div>
+
+                <img src="libras.png" alt="Alasca">
+                <div class="intro">
+                    <h1>ALASCA</h1>
+                    <p>No norte, o clima é polar e, no sul e litoral, o clima é temperado. As temperaturas médias variam de -24°C a 16°C, dependendo da região e do período do ano.</p>
+                </div>
+
+        </div>
+    </div> 
+
+</body>
+</html>

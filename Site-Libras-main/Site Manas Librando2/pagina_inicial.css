@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:100% ;
+    z-index: 0;
+}
+.faixa_superior{ 
+    position: relative;
+    z-index: 9999; /* Valor alto para trazer para frente */;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 80px;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    top:0;
+    z-index: 1;
+    /* -webkit-box-shadow: 0px 40px 81px -27px rgba(0,0,0,0.84); */
+    /* -moz-box-shadow: 0px 40px 81px -27px rgba(0,0,0,0.84); */
+    /* box-shadow: 0px 40px 81px -27px rgba(0,0,0,0.84); */
+}
+nav{
+
+    text-align: center;
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+}
+nav a{
+    display: inline-block;
+    color: rgb(255, 246, 246);
+    text-decoration: none;
+    padding: 0px 50px 10px 0;
+    font-size: 20px;
+    position: relative;
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 80%;
+}
+
+.espaco_logo{
+    display: flex;
+}
+
+.dropdown-menu{
+    background: linear-gradient(90deg, rgba(212, 14, 149, 0.171) 0%, rgba(170, 78, 16, 0.123) 52%, rgba(114, 18, 141, 0.151) 100%);
+    position: absolute;
+    justify-content: center;
+    padding: 15px;
+    display: none;
+}
+.dropdown-menu a{
+    display: block;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.container .box video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit:cover;
+}
+
+.pagina_inicial{
+    display: absolute;
+    justify-items: center;
+    justify-content: space-evenly;
+    
+}
+.card_pagina_inicial{
+    /* filter: grayscale(20%); - FILTRO PARA DEIXAR A IAMGEM PRETO E BRANCO */
+    background: linear-gradient(rgba(63, 60, 60, 0.644), rgba(255, 255, 255, 0.3)),url(imgens-Ana/logo-manalibrando-fundo.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: flex;
+    display: absolute;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 600px;
+    width: auto;
+    background-color: white;
+    z-index: 0;
+    /* margin-top: 80px; */
+}
+
+.ah{
+    padding: 10px;
+    position: relative;
+    display: block;
+    color: white;
+    left: 0;
+    margin-left: 100px;
+    height: 300px;
+    top: 100px;
+    
+}
+.ah h1{
+    margin: 0px;
+    font-size: 80px;
+    font-family: "Russo One", sans-serif;
+}
+
+.ah h2{
+    margin: 0px;
+    font-size: 30px;
+    font-family:  "Ciclo de Notícias", sans-serif;
+}
+.paragrafo-inicio {
+    z-index: 9999; /* Valor alto para trazer para frente */;
+    position: relative;
+    margin-bottom: 0px;
+    font-size: 28px;
+}
+
+.frase-impacto {
+    margin: 0px;
+    font-size: 50px;
+    font-family: "Russo One", sans-serif;
+}
+.frase-impacto p{
+    font-size: 30px;
+}
+
+.card_pagina_inicial2{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: flex;
+    display: flex;
+    margin: 0;
+    height: 600px;
+    width: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+
+
+.card_pagina_inicial3{
+    background-image: url(Background_pg_inicial.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: flex;
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 600px;
+    width: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.parte_inf_card2{
+    flex-direction: row;
+}
+
+.box {
+    width: 50%;
+    float: left;
+    height: 500px;/*Altura da linha*/
+}
+
+.linha-vertical {
+    border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    box-sizing: border-box;
+}
+.box{
+    flex-direction: row;
+}
+
+.simples{
+    text-align: end;
+}
+
+
+/* ************************************************************************************************ */
+/* Alterações Ana */
+
+.img-not{
+    /* Essas alterações que fiz colocam a mimagem do lado do texto
+    e o menu fixo passa por cima da imagem*/
+
+    /* Comando de posição */
+    position: absolute;
+    /* Elementos auxiliares */
+    top: 60px;         
+    left: 385px;
+}
+.img-not img{
+    height: 540px;
+}
+
+.logo-img img{
+    width: 90px;
+    height: 90px;
+}
+
+.logo-img img:hover{
+    /* box-shadow: 0 8px 10px 3px rgba(0,0,0,0.6); */
+     transform: translateY(-10px) scale(1.07) rotateX(1deg); 
+    
+}
+
