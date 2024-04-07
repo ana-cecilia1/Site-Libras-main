@@ -1,73 +1,217 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title>
-    <link rel="shortcut icon" href="imgens-Ana/logo-manalibrando1.png" type="image/x-icon">
-    <link rel="stylesheet" href="cursos.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=News+Cycle:wght@400;700&family=Playfair+Display&family=Russo+One&family=Titan+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playfair+Display&family=Russo+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="imgens-Ana/logo-manalibrando.png" type="image/x-icon">
+    <link rel="stylesheet" href="./cursos.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+
+    <!--Menu Superior--------------------------------------------------------------------->
     <div class="faixa_superior">
-        <div class="espaco_logo">
-            <div class="container">
-                   <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video>
+      <div class="espaco_logo">
+          <div class="logo-img">
+              <img src="./imgens-Ana/logo-manalibrando.png" alt="logo-inicio">
+              <!-- <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video> -->
+          </div>
+      </div>
+          <nav>
+              <ul>
+                  <li>
+                      <a href="contato.html">Contato</a>
+                  </li>
+                  <li>
+                      <a href="cursos.html">Cursos</a>
+                  </li>
+                  <li>
+                      <a href="#servicos">Serviços</a>
+                  </li>
+                  <li class="dropdown">
+                          <a href="pagina_inicial.html">Mais</a>
+
+                          <div class="dropdown-menu">
+                              <a href="pagina_inicial.html">Serviços1</a>
+                              <a href="pagina_inicial.html">Serviços2</a>
+                              <a href="pagina_inicial.html">Serviços3</a>
+                          </div>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+<!--Menu Superior--------------------------------------------------------------------->
+
+
+<!--Cards em lista infinita--------------------------------------------------------------------->
+    <div class="slider-container swiper">
+      <div class="slider-content">
+        <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
             </div>
-        
-            <script>
-                const clip = document.querySelectorAll('.clip');
-                for (let i = 0; i<clip.length; i++){
-                    clip[i].addEventListener('mouseenter',
-                    function(e){
-                        clip[i].play()
-                    })
-                    
-                }
-            </script> 
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                expedita aliquam, aut quia eum nihil.
+              </p>
+              <button class="button">View More</button>
+            </div>
+          </div>
         </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="pagina_inicial.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-                    <li>
-                        <a href="cursos.html">Cursos</a>
-                    </li>
-                    <li>
-                        <a href="pagina_inicial.html">Serviços</a>
-                    </li>
-                    <li class="dropdown">
-                            <a href="pagina_inicial.html">Mais</a>
-
-                            <div class="dropdown-menu">
-                                <a href="pagina_inicial.html">Serviços1</a>
-                                <a href="pagina_inicial.html">Serviços2</a>
-                                <a href="pagina_inicial.html">Serviços3</a>
-                            </div>
-                    </li>
-                </ul>
-            </nav>
+      </div>
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
     </div>
-
-    <div class="container-card">
-        <div class="card">
-                <img src="libras.png" alt="Alasca">
-                <div class="intro">
-                    <h1>ALASCA</h1>
-                    <p>No norte, o clima é polar e, no sul e litoral, o clima é temperado. As temperaturas médias variam de -24°C a 16°C, dependendo da região e do período do ano.</p>
-                </div>
-
-                <img src="libras.png" alt="Alasca">
-                <div class="intro">
-                    <h1>ALASCA</h1>
-                    <p>No norte, o clima é polar e, no sul e litoral, o clima é temperado. As temperaturas médias variam de -24°C a 16°C, dependendo da região e do período do ano.</p>
-                </div>
-
-        </div>
-    </div> 
-
-</body>
+<!--Cards em lista infinita--------------------------------------------------------------------->
+    
+    
+  </body>
 </html>
