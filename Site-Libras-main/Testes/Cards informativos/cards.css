@@ -5,11 +5,11 @@ body{
     align-items: center;
 }
 
-.container{
+.container-card-informativo{
     display: flex;
 }
 
-.card{
+.card-informativo{
     display: absolute;
     height: 500px;
     margin: 50px;
@@ -17,7 +17,7 @@ body{
     overflow: hidden;
     border-radius: 10px;
 }
-img{
+.img-card-informativo{
     height: 500px;
     width: 350px;
     border-radius: 3px;
@@ -38,12 +38,12 @@ img{
     top: 55%;
 }
 
-h1{
+.h1-card-informativo{
     margin: 10px;
     font-size: 40px;
 }
 
-p{
+.p-card-informtivo{
     font-size: 20px;
     margin:20px;
     visibility: hidden;
