@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -148,9 +150,43 @@ nav a:hover::after{
   transition: all ease 0.3s;
   opacity: 0;
 }
-.button:hover {
-  background-color: #265df2;
+
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
 }
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out ;
+}
+
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
 .swiper-navBtn{
   color: #6e93f7;
   transition: color 0.3s ease;
@@ -247,9 +283,17 @@ span{
   bottom: 240px;
   background: black;
 }
-.card-informativo:hover .button{
+.card-informativo:hover .btn {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
   opacity: 1;
 }
+
+.card-informativo:hover .btn {
+  stroke-dashoffset: -480;
+}
+
+
 .card-informativo:hover p{
   opacity: 1;
   visibility: visible;

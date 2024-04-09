@@ -3,71 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Document</title>
     <link rel="stylesheet" href="contato.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" href="imgens-Ana/logo-manalibrando2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=News+Cycle:wght@400;700&family=Playfair+Display&family=Russo+One&family=Titan+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playfair+Display&family=Russo+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="imgens-Ana/logo-manalibrando.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </head>
 <body>
-<!--DEFININDO A FAIXA SUPERIOR E SEUS ITENS################################################################-->
+<!--Menu Superior--------------------------------------------------------------------->
     <div class="faixa_superior">
         <div class="espaco_logo">
-            <div class="container">
-                   <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video>
-                     </div>
-        
-            <script>
-                const clip = document.querySelectorAll('.clip');
-                for (let i = 0; i<clip.length; i++){
-                    clip[i].addEventListener('mouseenter',
-                    function(e){
-                        clip[i].play()
-                    })
-                    
-                }
-            </script> 
+            <div class="logo-img">
+                <img src="./imgens-Ana/logo-manalibrando.png" alt="logo-inicio">
+                <!-- <video src="logo animada.mp4" autoplay muted type="video/mp4"  class="clip"></video> -->
+            </div>
         </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="pagina_inicial.html">Home</a>
+                        <a href="contato.html">Contato</a>
                     </li>
                     <li>
-                        <a href="pagina_inicial.html">Contato</a>
+                        <a href="cursos.html">Cursos</a>
                     </li>
                     <li>
-                        <a href="pagina_inicial.html">Cursos</a>
+                        <a href="#servicos">Serviços</a>
                     </li>
-                    <li>
-                        <a href="pagina_inicial.html">Serviços</a>
-                    </li>
-                </ul>
-            </nav>
-    </div>
-<!--########################################################################################################-->
-    
-    <div class="card">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-            <div class="container">
-                <video src="logo2.mp4" autoplay muted type="video/mp4"  class="clip2"></video>
-                <script>
-                    const clip2 = document.querySelectorAll('.clip2');
-                    for (let i = 0; i<clip2.length; i++){
-                        clip2[i].addEventListener('mouseenter',
-                        function(e){
-                            clip2[i].play()
-                        })
-                        
-                    }
-                </script> 
+                    <li class="dropdown">
+                            <a href="pagina_inicial.html">Mais</a>
+
+                            <div class="dropdown-menu">
+                                <a href="pagina_inicial.html">Serviços1</a>
+                                <a href="pagina_inicial.html">Serviços2</a>
+                                <a href="pagina_inicial.html">Serviços3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        
-            <p>Entre em contato com MANAS LIBRANDO</p>
-        </div>
+<!--Menu Superior--------------------------------------------------------------------->
+
+<!--Formulário--------------------------------------------------------------------->
+<div class="card-contatos">
     
-</body>
-</html>
+    <form class="formulario" method="post" action="enviaDados.php">
+        
+        <h2 class="titulo">Formulário de Contato</h2>
+        
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="Nome" required="">
+            <span class="focus-border"> <i></i> </span>
+            
+        </label>
+        
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="E-mail" required="">
+            <span class="focus-border"> <i></i> </span>
+            
+        </label>
+        
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="Assunto" required="">
+            <span class="focus-border"> <i></i> </span>
+            
+        </label>
+        
+        <label class="naoexibir">
+            <span>Não preencher:</span><br>
+            <input type="text" name="url" value=""></p>
+        </label> 
+        
+        <label class="label">
+            
+            <textarea type="text" class="input-bordas textarea" rows="4" placeholder="Assunto" required=""></textarea>
+            <span class="focus-border"> <i></i> </span>
+            
+        </label>
+        
+        <button class="button-form borda-inversa"> Enviar</button>
+        
+        
+    </form>  
+    <img src="modelo-contato.png" class="modelo-contato">
+</div>
+
+<!--Formulário--------------------------------------------------------------------->
+
+<!-------------------------------------FOOTER------------------------>
+<footer>
+    <div class="footer-background">
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <div class="navbar">
+                        <div class="box-footer">
+                            <div class="icon instagram">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </div>
+                            <p>Instagram</p>
+                        </div>
+                
+                        <div class="box-footer">
+                            <div class="icon whatsapp">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                            </div>
+                            <p>Whatsapp</p>
+                        </div>
+                
+                        <div class="box-footer">
+                            <div class="icon facebook">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </div>
+                            <p>Facebook</p>
+                        </div>
+                
+                        <div class="box-footer">
+                            <div class="icon twitter">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </div>
+                            <p>Twitter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footerNav">
+                        <ul><li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="contato.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023; Designed by <span class="designer">None-Copyright</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-------------------------------------FOOTER------------------------>

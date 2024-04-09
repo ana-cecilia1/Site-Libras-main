@@ -1,287 +1,358 @@
-body{
-        margin: 0;
-        padding: 0;
-        background-image: url(Background_pg_contatos.jpg);
-        background-size:100% ;
-        width: 100%;
-        height: 100%;
-}
-.faixa_superior{
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    background-color: white;
-    height: 80px;
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-}
-nav{
-
-    text-align: center;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
     margin: 0;
+    padding: 0;  
+    background: black;     
+    background-size:100% ;
+    z-index: 0;
+    background: linear-gradient(rgba(63, 60, 60, 0.644), rgba(255, 255, 255, 0.3)),url(imgens-Ana/logo-manalibrando-fundo.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .faixa_superior{ 
+      position: relative;
+      z-index: 9999; /* Valor alto para trazer para frente */;
+      background-color: transparent;
+      backdrop-filter: blur(5px);
+      position: fixed;
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+      height: 80px;
+      margin-top: 0;
+      padding: 0;
+      width: 100%;
+      top:0;
+      z-index: 1;
+  }
+  nav{
+      text-align: center;
+      margin: 0;
+  }
+  
+  nav li{
+      display: inline-block;
+  }
+  nav a{
+      display: inline-block;
+      color: rgb(255, 246, 246);
+      text-decoration: none;
+      padding: 0px 50px 10px 0;
+      font-size: 20px;
+      position: relative;
+  }
+  
+  nav a::after{
+      content: " ";
+      width: 0%;
+      height: 4px;
+      background-color: orange;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 10px;
+      transition: 0.5s ease-in-out;
+  }
+  
+  nav a:hover::after{
+      width: 80%;
+  }
+  
+  .espaco_logo{
+      display: flex;
+  }
+  
+  .dropdown-menu{
+      background: linear-gradient(90deg, rgba(212, 14, 149, 0.171) 0%, rgba(170, 78, 16, 0.123) 52%, rgba(114, 18, 141, 0.151) 100%);
+      position: absolute;
+      justify-content: center;
+      padding: 15px;
+      display: none;
+  }
+  .dropdown-menu a{
+      display: block;
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    
+    /* ************************************************************************************************ */
+    /* Alterações Ana */
+    
+    .img-not{
+        /* Essas alterações que fiz colocam a mimagem do lado do texto
+        e o menu fixo passa por cima da imagem*/
+        
+        /* Comando de posição */
+        position: absolute;
+        /* Elementos auxiliares */
+        top: 60px;         
+        left: 385px;
+    }
+    .img-not img{
+        height: 540px;
+    }
+    
+    .logo-img img{
+        width: 90px;
+        height: 90px;
+    }
+    
+    .logo-img img:hover{
+        transform: translateY(-10px) scale(1.07) rotateX(1deg); 
+        
+    }
+    /*-----------------------------------------_Card-Formulário_---------------------------------*/
+    .card-contatos{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    /*-----------------------------------------_Card-Formulário_---------------------------------*/
+
+
+
+
+    /*-----------------------------------------_Formulario_---------------------------------*/
+    .formulario  .titulo { 
+        
+        color: #757575;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        
+    }
+    
+    .formulario {
+        margin: 90px;
+        position: flex; 
+        max-width: 500px;
+        background: white;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 17px;
+    
 }
 
-nav li{
-    display: inline-block;
-}
-nav a{
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    padding: 0px 50px 10px 0;
-    font-size: 20px;
+:focus{outline: none;}
+
+.label { 
+    
+    float: left; 
+    width: 100%; 
+    margin-bottom: 25px; 
     position: relative;
+    
 }
 
-nav a::after{
-    content: " ";
-    width: 0%;
-    height: 4px;
-    background-color: orange;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 10px;
-    transition: 0.5s ease-in-out;
-}   
-
-nav a:hover::after{
-    width: 80%;
+.input-bordas{
+    
+    font: 15px/24px "Lato", Arial, sans-serif; 
+    color: #333; 
+    width: 100%; 
+    box-sizing: border-box; 
+    letter-spacing: 1px;
+    border: 1px solid #ccc; 
+    padding: 7px 14px 9px; 
+    transition: 0.4s;
+    
 }
 
-.espaco_logo{
+.textarea { resize:none!important; }
+
+.input-bordas ~ .focus-border:before,
+.input-bordas ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.2s; transition-delay: 0.2s;}
+.input-bordas ~ .focus-border:after{top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.6s;}
+.input-bordas ~ .focus-border i:before,
+.input-bordas ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #3399FF; transition: 0.2s;}
+.input-bordas ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.4s;}
+.input-bordas:focus ~ .focus-border:before,
+.input-bordas:focus ~ .focus-border:after{width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+.input-bordas:focus ~ .focus-border:after{transition-delay: 0.2s;}
+.input-bordas:focus ~ .focus-border i:before,
+.input-bordas:focus ~ .focus-border i:after{height: 100%; transition: 0.2s;}
+.input-bordas:focus ~ .focus-border i:after{transition-delay: 0.4s;}
+
+
+.button-form { 
+    
+    background-color: #39f;
+    padding: 0.5em 1.3em;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.borda-inversa {
+    
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    box-shadow: inset 0 0 0 2px #39f, 0 0 1px rgba(0, 0, 0, 0);
+    
+}
+
+.borda-inversa:hover, .borda-inversa:focus, .borda-inversa:active {
+    
+    background: none;
+    color:#39f; 
+    
+}
+
+/*Anti-span*/
+.naoexibir { display:none; }
+/*-----------------------------------------_Formulario_---------------------------------*/
+
+
+
+/*-------------------FOOTER - informações e contato no fim da pagina----------------------------------------------------*/
+
+footer{
+    background: #483285;  
+}
+.footerContainer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
     display: flex;
-}
-
-.dropdown-menu{
-    position: absolute;
-    background-color: white;
     justify-content: center;
-    padding: 15px;
-    display: none;
+    list-style-type: none;
 }
-.dropdown-menu a{
-    display: block;
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
 }
-.dropdown:hover .dropdown-menu{
-    display: block;
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
 }
 
-.container .box video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit:cover;
-}
-
-
-.espaco_links_contato{
-     align-items: center;
+/*Icons - Footer*/
+.box-footer{
+    width: 65px;
+    height: 68px;
     display: flex;
-    top: 0 ;
-    position: absolute;
-    left: 60%;
-    top: 20% ;
-}
-.box_links{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    display: flex;
-    color: black;
-    height: 389.47px;
-    width: 500px;
-    border-bottom: black;
-}
-
-
-.botoes_contato_whatsaap{
-    font-family: "ROBOTO",sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: #25D366;
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
-    -webkit-transform-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-proprty: box-shadow, transform;
-    
-}
-
-.botoes_contato_whatsaap:hover, .botoes_contato_whatsaap:focus, .botoes_contato_whatsaap:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1)
-}
-
-
-.botoes_contato_telegran{
-    font-family: "ROBOTO",sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: #1f304e;
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
-    -webkit-transform-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-proprty: box-shadow, transform;
-    
-}
-
-.botoes_contato_telegran:hover, .botoes_contato_telegran:focus, .botoes_contato_telegran:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1)
-}
-
-
-.botoes_contato_email{
-    font-family: "ROBOTO",sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background:#db4a39;
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0 ,0.1);
-    -webkit-transform-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-proprty: box-shadow, transform;
-    
-}
-
-.botoes_contato_email:hover, .botoes_contato_email:focus, .botoes_contato_email:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1)
-}
-
-.p-contato{
-    font-size: large;
-    font-size: 30px;
-}
-
-.card{
-    display: flex;
-    align-items: top;
-    height: 400px;
-    background-color: white;
-    position: absolute;
-    left: 2%;
-    width: 650px;
-    top: 20%;
-    font-size: 30px;
-    color: black;
-    border-radius: 10px;
-    align-items: center;
-    flex-direction: column;
-    justify-content:space-evenly ;
+    padding: 5px;
+    margin: 0.6rem;
+    position: relative;
     overflow: hidden;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.box-footer:hover{
+    width: 200px;
+    background: #c32aa3;
+    border-radius: 35px;
+    color: #fff;
+    box-shadow: 0 0 50px #b315917c;
+}
+.box-footer:nth-child(2):hover{
+    background: #25d366;
+    box-shadow: 0 0 50px #25d3657e;
+}
+.box-footer:nth-child(3):hover{
+    background: #1877f2;
+    box-shadow: 0 0 50px #1876f285;
+}
+.box-footer:nth-child(4):hover{
+    background: #1da1f2;
+    box-shadow: 0 0 50px #1da0f280;
 }
 
-.card span:first-of-type{
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.navbar p{
+    margin-left:10px;
+    transform: translate(60px);
+}
+.box-footer .icon{
     position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, transparent, #4B0082);
-    width: 100%;
-    height: 6px;
-    border-radius: 10px;
-    animation: animar1 2s linear infinite;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all .4s ease;
+}
+.instagram{
+    background-color: #c32aa3;
+}
+.whatsapp{
+    background-color: #25d366;
+}
+.facebook{
+    background-color: #1877f2;
+}
+.twitter{
+    background-color: #1da1f2;
+}
+.box-footer:hover .icon{
+    background: #fff;
+    color: #3b3b3b;
+    box-shadow: 0 0 20px rgba(0,0,0,0.26);
 }
 
-@keyframes animar1 {
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(100%);
 
-    }
-}
-
-.card span:nth-of-type(2){
-    position: absolute;
-    top: 0;
-    right:0;
-    background: linear-gradient(to bottom, transparent, #4B0082);
-    width: 6px;
-    height: 100%;
-    border-radius: 10px;
-    animation: animar2 2s linear infinite;
-    animation-delay: 1s;
-}
-
-@keyframes animar2 {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(100%);
-
-    }
-}
-
-.card span:nth-of-type(3){
-    position: absolute;
-    bottom: 0;
-    right:0;
-    width: 100%;
-    height: 6px;
-    border-radius: 10px;
-    background: linear-gradient(to left, transparent,#4B0082);
-    animation: animar3 2s linear infinite;
-}
-
-@keyframes animar3 {
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(-100%);
-
-    }
-}
-
-.card span:last-of-type {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 6px;
-   height: 100%;
-   border-radius: 10px;
-   background: linear-gradient(to top, transparent, #4B0082);
-   animation: animar4 2s linear infinite;
-   animation-delay: 1s;
-}
-
-@keyframes animar4 {
-    0%{
-        transform: translateY(100%);
-    }
-    100%{
-        transform: translateY(-100%);
-
-    }
-}
+/*-------------------FOOTER - informações e contato no fim da pagina----------------------------------------------------*/
